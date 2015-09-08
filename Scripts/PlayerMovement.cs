@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour {
 	//floats
 
 	//strings
-	public const string pickUps;
+	public string pickUps;
 	//strings
 
 	//int
@@ -39,7 +39,6 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		Move ();
 		Jump ();
-		Shoot ();
 	}
 	
 	void Move ()
