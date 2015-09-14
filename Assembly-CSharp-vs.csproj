@@ -46,14 +46,19 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Cutscenes.cs" />
-     <Compile Include="Assets\Scripts\MainMenu.cs" />
-     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-     <Compile Include="Assets\Scripts\PostURL.cs" />
-     <Compile Include="Assets\Scripts\RandomGenerator.cs" />
-     <Compile Include="Assets\Scripts\ReturnToMain.cs" />
-     <Compile Include="Assets\Scripts\ScrollBackground.cs" />
-     <Compile Include="Assets\Scripts\Splashscreen.cs" />
+     <Compile Include="Assets\ArrayPrinter.cs" />
+     <Compile Include="Assets\ListPrinter.cs" />
+     <Compile Include="Assets\Scripts\Camera\PixelPerfect.cs" />
+     <Compile Include="Assets\Scripts\Generator\ChunkManager.cs" />
+     <Compile Include="Assets\Scripts\Generator\RandomGenerator.cs" />
+     <Compile Include="Assets\Scripts\Level\ScrollBackground.cs" />
+     <Compile Include="Assets\Scripts\Menus\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\Menus\PostURL.cs" />
+     <Compile Include="Assets\Scripts\Menus\ReturnToMain.cs" />
+     <Compile Include="Assets\Scripts\Menus\Splashscreen.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\UI\CountDown.cs" />
+     <Compile Include="Assets\Scripts\UI\Cutscenes.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

@@ -1,0 +1,737 @@
+fileFormatVersion: 2
+guid: 44c8c42f01873b74889a0584c6510d6b
+timeCreated: 1441905271
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: tiletest_0
+    21300002: tiletest_1
+    21300004: tiletest_2
+    21300006: tiletest_3
+    21300008: tiletest_4
+    21300010: tiletest_5
+    21300012: tiletest_6
+    21300014: tiletest_7
+    21300016: tiletest_8
+    21300018: tiletest_9
+    21300020: tiletest_10
+    21300022: tiletest_11
+    21300024: tiletest_12
+    21300026: tiletest_13
+    21300028: tiletest_14
+    21300030: tiletest_15
+    21300032: tiletest_16
+    21300034: tiletest_17
+    21300036: tiletest_18
+    21300038: tiletest_19
+    21300040: tiletest_20
+    21300042: tiletest_21
+    21300044: tiletest_22
+    21300046: tiletest_23
+    21300048: tiletest_24
+    21300050: tiletest_25
+    21300052: tiletest_26
+    21300054: tiletest_27
+    21300056: tiletest_28
+    21300058: tiletest_29
+    21300060: tiletest_30
+    21300062: tiletest_31
+    21300064: tiletest_32
+    21300066: tiletest_33
+    21300068: tiletest_34
+    21300070: tiletest_35
+    21300072: tiletest_36
+    21300074: tiletest_37
+    21300076: tiletest_38
+    21300078: tiletest_39
+    21300080: tiletest_40
+    21300082: tiletest_41
+    21300084: tiletest_42
+    21300086: tiletest_43
+    21300088: tiletest_44
+    21300090: tiletest_45
+    21300092: tiletest_46
+    21300094: tiletest_47
+    21300096: tiletest_48
+    21300098: tiletest_49
+    21300100: tiletest_50
+    21300102: tiletest_51
+    21300104: tiletest_52
+    21300106: tiletest_53
+    21300108: tiletest_54
+    21300110: tiletest_55
+    21300112: tiletest_56
+    21300114: tiletest_57
+    21300116: tiletest_58
+    21300118: tiletest_59
+    21300120: tiletest_60
+    21300122: tiletest_61
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 98
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: tiletest_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1164
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_1
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1228
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_2
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1164
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_3
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1164
+        width: 128
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_4
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1164
+        width: 128
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_5
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 1164
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_6
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 1164
+        width: 79
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_7
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1164
+        width: 128
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1020
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1020
+        width: 128
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_10
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1020
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_11
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1020
+        width: 128
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_12
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1020
+        width: 128
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_13
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1020
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_14
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1020
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_15
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 1020
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 876
+        width: 128
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_17
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 876
+        width: 128
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_18
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 876
+        width: 128
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_19
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 876
+        width: 128
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_20
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 876
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_21
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 876
+        width: 86
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_22
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 876
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_23
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 876
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_24
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 732
+        width: 128
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_25
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 732
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_26
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 732
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_27
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 748
+        width: 140
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_28
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 732
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_29
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 732
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 588
+        width: 128
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_31
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 588
+        width: 70
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_32
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 588
+        width: 128
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_33
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 588
+        width: 70
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_34
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 588
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_35
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 588
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_36
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 588
+        width: 128
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_37
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 588
+        width: 128
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 444
+        width: 128
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_39
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 444
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_40
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 444
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_41
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 444
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_42
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 444
+        width: 97
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_43
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 444
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_44
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 444
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_46
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 300
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_47
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 300
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_48
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 300
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_49
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 300
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_50
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 300
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_51
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 31
+        width: 39
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 156
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_53
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 156
+        width: 96
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_54
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 182
+        width: 128
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_55
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 111
+        width: 80
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_56
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 112
+        width: 80
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_57
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 101
+        width: 140
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_58
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 144
+        width: 32
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_59
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 12
+        width: 96
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_60
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 65
+        width: 128
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tiletest_61
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 77
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
