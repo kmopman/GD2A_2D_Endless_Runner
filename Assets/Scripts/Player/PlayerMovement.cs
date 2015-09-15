@@ -5,6 +5,10 @@ public class PlayerMovement : MonoBehaviour {
 	
 	//public GameManager gameManager;
 
+	//player
+	public GameObject player;
+	//player
+
 	//floats
 	public float speed;
 	public float jumpHeight;
@@ -16,6 +20,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	//int
 	public int jumps = 0;
+	public int seconds;
 	//int
 
 	//bool
@@ -25,8 +30,8 @@ public class PlayerMovement : MonoBehaviour {
 	//bool
 
 	//audio
-	public AudioSource jumpSFX;
-	public AudioSource itemSFX;
+	//public AudioSource jumpSFX;
+	//public AudioSource itemSFX;
 	//audio
 
 	//animator
@@ -40,56 +45,65 @@ public class PlayerMovement : MonoBehaviour {
 		anim = GetComponent<Animator> ();
 		grounded = false;
 	}
+
+	void Start ()
+	{
+		anim.SetBool ("Jump", true);
+	}
 	
 
 	IEnumerator waitThreeSeconds()
 	{
-		yield return new WaitForSeconds (3);
-		//Debug.Log ("Works!");
+		yield return new WaitForSeconds (seconds);
+		anim.SetBool("Skating", true);
 		goSign = true;
 	}
 
 	void FixedUpdate () 
 	{
-		if (goSign == true) //als de drie secondes afgelopen zijn, voer dit dan uit.
+		if (goSign == true) 
 		{
-			Animation();
-			Jump ();
+			Movement ();
 		}
 
-	}
-
-	void Animation()
-	{
-		anim.SetBool ("Skating", true);
-	}
-
-	void Move ()
-	{
-
-
-		//CROUCHING
-		if (Input.GetKeyDown (KeyCode.LeftShift)) 
+		if (jumps == 1) 
 		{
-			Debug.Log ("Test");
+			anim.SetBool("Jump", true);
+			anim.SetBool ("Crouch", false);
 		}
-		//CROUCHING
+			
 	}
 	
-	void Jump () 
+	void Movement () 
 	{
-		if (!spacePressed && Input.GetKey (KeyCode.Space) && jumps < 2) {
-			spacePressed = true;
-			//jumpSFX.Play ();
-			anim.SetBool ("Jump", true);
+		//JUMP
+		if (!spacePressed && Input.GetKey (KeyCode.Space) && jumps < 2) 
+		{
 			GetComponent<Rigidbody2D>().velocity = new Vector2 (0f, jumpHeight);
+			anim.SetBool ("Crouch", false);
+			anim.SetBool ("Skating", false);
+			spacePressed = true;
 			grounded = false;
+			//jumpSFX.Play ();
 			jumps++;
+	
+		}
+		//JUMP
 
-		} else if (!Input.GetKey(KeyCode.Space))
+
+		//CROUCHING
+		if (Input.GetKey (KeyCode.Z)) {
+			anim.SetBool ("Skating", false);
+			anim.SetBool ("Crouch", true);
+		} 
+		//CROUCHING
+
+		else if (!Input.GetKey(KeyCode.Space))
 		{
 			spacePressed = false;
 		}
+
+
 		
 	}
 
@@ -97,7 +111,10 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		grounded = true;
 		anim.SetBool ("Jump", false);
-		//anim.SetInteger ("AnimationState", 0);
+		if (goSign == true) 
+		{
+			anim.SetBool ("Skating", true);
+		}
 		jumps = 0;
 	}
 	

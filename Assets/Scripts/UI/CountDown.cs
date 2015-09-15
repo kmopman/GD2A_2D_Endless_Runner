@@ -8,11 +8,11 @@ public class CountDown : MonoBehaviour {
 	public float seconds;
 	public GameObject waitingObject;
 
-	void Start() 
+	void Awake() 
 	{
 		Appear ();
 	}
-
+	
 	void Appear ()
 	{
 		StartCoroutine ("waitSeconds");
