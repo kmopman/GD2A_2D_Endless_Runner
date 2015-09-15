@@ -1,8 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\PlayerMovement.cs">
     <Files>
-      <File FileName="Assets\Scripts\Player\PlayerMovement.cs" Line="97" Column="32" />
+      <File FileName="Assets\Scripts\Player\PlayerMovement.cs" Line="13" Column="10" />
+      <File FileName="Assets\Scripts\UI\CountDown.cs" Line="6" Column="36" />
+      <File FileName="Assets\Scripts\Level\ScrollBackground.cs" Line="8" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

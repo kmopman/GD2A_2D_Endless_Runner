@@ -5,10 +5,10 @@ public class CountDown : MonoBehaviour {
 
 	// Update is called once per frame
 
-	public float seconds;
-	public GameObject waitingObject;
+	private float seconds;
+	private GameObject waitingObject;
 
-	void Awake() 
+	void Awake()
 	{
 		Appear ();
 	}

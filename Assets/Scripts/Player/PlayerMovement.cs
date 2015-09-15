@@ -6,27 +6,31 @@ public class PlayerMovement : MonoBehaviour {
 	//public GameManager gameManager;
 
 	//player
-	public GameObject player;
+	[SerializeField]
+	private GameObject player;
 	//player
 
 	//floats
-	public float speed;
-	public float jumpHeight;
+	private float jumpHeight = 8.0f;
 	//floats
 
 	//strings
-	public string pickUps;
+	[SerializeField]
+	private string pickUps;
 	//strings
 
 	//int
-	public int jumps = 0;
-	public int seconds;
+	private int jumps = 0;
+	private int seconds = 3;
 	//int
 
 	//bool
-	public bool spacePressed;
-	public bool grounded;
-	public bool goSign = false;
+	[SerializeField]
+	private bool spacePressed;
+	[SerializeField]
+	private bool grounded;
+	[SerializeField]
+	private bool goSign = false;
 	//bool
 
 	//audio

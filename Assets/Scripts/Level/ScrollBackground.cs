@@ -3,9 +3,9 @@ using System.Collections;
 
 public class ScrollBackground : MonoBehaviour {
 
-	public float speed = 0.0f;
-	public float limitspeed;
-	public bool goSign = false;
+	private float speed = 0.0f;
+	private float limitspeed;
+	private bool goSign = false;
 
 	// Use this for initialization
 	void Start () {
