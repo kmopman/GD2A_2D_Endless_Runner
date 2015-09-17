@@ -3,6 +3,7 @@ using System.Collections;
 
 public class ScrollBackground : MonoBehaviour {
 
+	[SerializeField]
 	private float speed = 0.0f;
 	private float limitspeed;
 	private bool goSign = false;
@@ -15,7 +16,6 @@ public class ScrollBackground : MonoBehaviour {
 	IEnumerator waitThreeSeconds()
 	{
 		yield return new WaitForSeconds (3);
-		Debug.Log ("Works!");
 		goSign = true;
 	}
 
@@ -26,9 +26,9 @@ public class ScrollBackground : MonoBehaviour {
 			Vector2 offset = new Vector2 (Time.time * speed, 0);
 
 			if (speed <= 0.001) {
-				speed += 0.00001f;
+				speed += 0.0001f;
 			} else if (speed >= 0.1) {
-				speed += 0.000005f;
+				speed += 0.00005f;
 			} else {
 				speed += 0.00001f;
 			}
