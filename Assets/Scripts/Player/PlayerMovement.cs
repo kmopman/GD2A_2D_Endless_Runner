@@ -75,6 +75,8 @@ public class PlayerMovement : MonoBehaviour {
 			anim.SetBool("Jump", true);
 			anim.SetBool ("Crouch", false);
 		}
+
+		anim.speed += 0.0003f;
 			
 	}
 	
