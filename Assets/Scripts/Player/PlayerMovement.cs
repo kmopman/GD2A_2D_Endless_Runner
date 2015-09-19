@@ -34,7 +34,8 @@ public class PlayerMovement : MonoBehaviour {
 	//bool
 
 	//audio
-	//public AudioSource jumpSFX;
+	[SerializeField]
+	private AudioSource jumpSFX;
 	//public AudioSource itemSFX;
 	//audio
 
@@ -90,7 +91,7 @@ public class PlayerMovement : MonoBehaviour {
 			anim.SetBool ("Skating", false);
 			spacePressed = true;
 			grounded = false;
-			//jumpSFX.Play ();
+			jumpSFX.Play ();
 			jumps++;
 	
 		}
@@ -98,10 +99,16 @@ public class PlayerMovement : MonoBehaviour {
 
 
 		//CROUCHING
-		if (Input.GetKey (KeyCode.Z)) {
+		if (Input.GetKeyDown (KeyCode.Z) && grounded == true) {
 			anim.SetBool ("Skating", false);
 			anim.SetBool ("Crouch", true);
-		} 
+			//this.transform.localScale = new Vector2 (1.6f,1f);
+		} else if (Input.GetKeyUp (KeyCode.Z) && grounded == true) 
+		{
+			anim.SetBool ("Crouch", false);
+			anim.SetBool ("Skating", true);
+			//this.transform.localScale = new Vector2 (1.5f,1.5f);
+		}
 		//CROUCHING
 
 		else if (!Input.GetKey(KeyCode.Space))
@@ -115,12 +122,15 @@ public class PlayerMovement : MonoBehaviour {
 
 	void OnCollisionEnter2D (Collision2D hit)
 	{
-		grounded = true;
-		anim.SetBool ("Jump", false);
 		if (goSign == true) 
 		{
 			anim.SetBool ("Skating", true);
 		}
+
+
+		grounded = true;
+		anim.SetBool ("Jump", false);
+
 		jumps = 0;
 	}
 	

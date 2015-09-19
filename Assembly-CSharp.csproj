@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\Camera\PixelPerfect.cs" />
      <Compile Include="Assets\Scripts\Generator\ChunkManager.cs" />
      <Compile Include="Assets\Scripts\Generator\Destroy.cs" />
+     <Compile Include="Assets\Scripts\Generator\ObjDestroyer.cs" />
      <Compile Include="Assets\Scripts\Generator\ObjectSpawner.cs" />
      <Compile Include="Assets\Scripts\Generator\RandomGenerator.cs" />
      <Compile Include="Assets\Scripts\Level\ObjectMovement.cs" />

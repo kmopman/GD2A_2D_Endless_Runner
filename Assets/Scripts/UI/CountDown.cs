@@ -5,7 +5,9 @@ public class CountDown : MonoBehaviour {
 
 	// Update is called once per frame
 
+	[SerializeField]
 	private float seconds;
+	[SerializeField]
 	private GameObject waitingObject;
 
 	void Awake()

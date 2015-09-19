@@ -4,9 +4,19 @@ using System.Collections;
 public class ScrollBackground : MonoBehaviour {
 
 	[SerializeField]
+	//floats
 	private float speed = 0.0f;
 	private float limitspeed;
+	//floats
+
+	//bools
 	private bool goSign = false;
+	//bools
+
+	//int
+	[SerializeField]
+	private int seconds = 3;
+	//int
 
 	// Use this for initialization
 	void Start () {
@@ -15,7 +25,7 @@ public class ScrollBackground : MonoBehaviour {
 
 	IEnumerator waitThreeSeconds()
 	{
-		yield return new WaitForSeconds (3);
+		yield return new WaitForSeconds (seconds);
 		goSign = true;
 	}
 
