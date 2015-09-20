@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour {
 	//int
 	private int jumps = 0;
 	private int seconds = 3;
+	private int deathCounter = 0;
+	private int deathDelay = 3;
 	//int
 
 	//bool
@@ -120,7 +122,16 @@ public class PlayerMovement : MonoBehaviour {
 		
 	}
 
-	void OnCollisionEnter2D (Collision2D hit)
+	void Pause(){
+		if (Time.timeScale == 1){
+			Time.timeScale = 0;
+		}
+		else if (Time.timeScale == 0){
+			Time.timeScale = 1;
+		}
+	}
+
+	void OnCollisionEnter2D (Collision2D coll)
 	{
 		if (goSign == true) 
 		{
@@ -132,16 +143,27 @@ public class PlayerMovement : MonoBehaviour {
 		anim.SetBool ("Jump", false);
 
 		jumps = 0;
-	}
-	
-	
-	void OnTriggerEnter2D(Collider2D other)
-	{
-		if (other.transform.tag == pickUps) 
+
+		if (coll.gameObject.tag == "Obstacle") 
+		{
+			deathCounter++;
+
+			if (deathCounter >= 3)
+			{
+				anim.SetBool("Skating", false);
+				anim.SetBool("Death", true);
+				Pause ();
+			}
+
+
+			Debug.Log (deathCounter);
+		}
+
+		if (coll.gameObject.tag == "PickUp") 
 		{
 			//itemSFX.Play ();
 			//gameManager.AddCollectable();
-			Destroy(other.gameObject);
+			Destroy(coll.gameObject);
 		}
 	}
 }

@@ -7,17 +7,31 @@ public class ScoreManager : MonoBehaviour
 	[SerializeField]
 	private Text scoreText;
 
-	public float scoreCounter;
+	private float seconds = 3f;
+	private float scoreCounter;
+
+	private bool runText = false;
 
 	void Start () 
 	{
-		SetScoreText ();
+		StartCoroutine ("waitThreeSeconds");
+		//SetScoreText ();
+	}
+
+	IEnumerator waitThreeSeconds() 
+	{
+		yield return new WaitForSeconds (seconds);
+		runText = true;
 	}
 	
 	void Update () 
 	{
-		SetScoreText ();
-		scoreCounter++;
+		if (runText == true) 
+		{
+			SetScoreText ();
+			scoreCounter++;
+		}
+
 	}
 
 	void SetScoreText()

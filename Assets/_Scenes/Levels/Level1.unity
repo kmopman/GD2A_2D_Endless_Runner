@@ -697,6 +697,7 @@ GameObject:
   - 4: {fileID: 847837562}
   - 212: {fileID: 847837564}
   - 114: {fileID: 847837563}
+  - 61: {fileID: 847837565}
   m_Layer: 0
   m_Name: Lamp 2 (2)
   m_TagString: Untagged
@@ -758,6 +759,19 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300004, guid: ae7d037c40c2e23419da8d8fff9cc798, type: 3}
   m_Color: {r: 1, g: .51838237, b: .51838237, a: 1}
+--- !u!61 &847837565
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 847837561}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.25, y: 6.9375}
 --- !u!1001 &891286014
 Prefab:
   m_ObjectHideFlags: 0
@@ -804,6 +818,10 @@ Prefab:
     - target: {fileID: 183954, guid: 361cba9bf6c52d640a33f5a5eea6e6f2, type: 2}
       propertyPath: m_Name
       value: Lamp 1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198434, guid: 361cba9bf6c52d640a33f5a5eea6e6f2, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 361cba9bf6c52d640a33f5a5eea6e6f2, type: 2}
@@ -990,6 +1008,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6161058, guid: 18bde2453bf8ee74a91ae761421ce85b, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18bde2453bf8ee74a91ae761421ce85b, type: 2}
   m_IsPrefabParent: 0
@@ -1129,7 +1151,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 479434, guid: d6107ee8e586a4b409fed4d88bce7c0f, type: 2}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 11460402, guid: d6107ee8e586a4b409fed4d88bce7c0f, type: 2}
       propertyPath: movementSpeed
@@ -1188,6 +1210,14 @@ Prefab:
     - target: {fileID: 11494866, guid: 361cba9bf6c52d640a33f5a5eea6e6f2, type: 2}
       propertyPath: movementSpeed
       value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198434, guid: 361cba9bf6c52d640a33f5a5eea6e6f2, type: 2}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198434, guid: 361cba9bf6c52d640a33f5a5eea6e6f2, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 361cba9bf6c52d640a33f5a5eea6e6f2, type: 2}
@@ -1416,8 +1446,8 @@ MonoBehaviour:
   - {fileID: 176420, guid: 8cbc2fff99549744595e91ac7e864bcb, type: 2}
   - {fileID: 198550, guid: 749112bb8c2ba994c8619cc30452d89c, type: 2}
   lamps:
-  - {fileID: 183954, guid: 361cba9bf6c52d640a33f5a5eea6e6f2, type: 2}
   - {fileID: 111176, guid: 11c151ec21c900442a850e894ff349c6, type: 2}
+  - {fileID: 183954, guid: 361cba9bf6c52d640a33f5a5eea6e6f2, type: 2}
   delayTimer: 2
   lampTimer: 3
 --- !u!4 &1561571000
@@ -1479,7 +1509,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1598199561}
-  scoreCounter: 0
 --- !u!114 &1598199561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1622,7 +1651,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7aa39489cee907e48b90831046f4ba38, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .270000011
   m_Pitch: 1
   Loop: 0
   Mute: 0

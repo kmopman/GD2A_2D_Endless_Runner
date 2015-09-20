@@ -23,7 +23,6 @@ public class CountDown : MonoBehaviour {
 	IEnumerator waitSeconds()
 	{
 		yield return new WaitForSeconds (seconds);
-		Debug.Log ("Test?");
 		waitingObject.SetActive (true);
 	}
 
