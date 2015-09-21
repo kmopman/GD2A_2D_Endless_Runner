@@ -8,7 +8,7 @@ public class ScoreManager : MonoBehaviour
 	private Text scoreText;
 
 	private float seconds = 3f;
-	private float scoreCounter;
+	public float scoreCounter;
 
 	private bool runText = false;
 

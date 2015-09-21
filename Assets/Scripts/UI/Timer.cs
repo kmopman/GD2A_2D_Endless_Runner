@@ -7,7 +7,7 @@ public class Timer : MonoBehaviour
     [SerializeField]
     private Text timerText;
 
-    private float timerCounter;
+    public float timerCounter;
 	private float seconds = 3f;
 
 	private bool runTimer = false;

@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\ArrayPrinter.cs" />
+     <Compile Include="Assets\DeactiveOnStart.cs" />
      <Compile Include="Assets\ListPrinter.cs" />
      <Compile Include="Assets\Scripts\Camera\PixelPerfect.cs" />
      <Compile Include="Assets\Scripts\Generator\ChunkManager.cs" />
@@ -60,6 +61,9 @@
      <Compile Include="Assets\Scripts\Menus\PostURL.cs" />
      <Compile Include="Assets\Scripts\Menus\ReturnToMain.cs" />
      <Compile Include="Assets\Scripts\Menus\Splashscreen.cs" />
+     <Compile Include="Assets\Scripts\Pickups\Pickup.cs" />
+     <Compile Include="Assets\Scripts\Pickups\Shield.cs" />
+     <Compile Include="Assets\Scripts\Pickups\Soda.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\UI\CountDown.cs" />
      <Compile Include="Assets\Scripts\UI\Cutscenes.cs" />

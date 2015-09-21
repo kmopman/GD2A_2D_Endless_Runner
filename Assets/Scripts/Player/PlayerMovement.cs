@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	//floats
 	private float jumpHeight = 8.0f;
+	private float deathBraking = -5.0f;
 	//floats
 
 	//strings
@@ -33,6 +34,7 @@ public class PlayerMovement : MonoBehaviour {
 	private bool grounded;
 	[SerializeField]
 	private bool goSign = false;
+	private bool brakingDeath = false;
 	//bool
 
 	//audio
@@ -49,13 +51,13 @@ public class PlayerMovement : MonoBehaviour {
 	void Awake ()
 	{
 		StartCoroutine ("waitThreeSeconds"); //wacht drie seconden
-		anim = GetComponent<Animator> ();
-		grounded = false;
+		anim = GetComponent<Animator> (); //grijpt de animator zodat ie daar wijzigingen in kan maken
+		grounded = false; // je begint niet op de grond
 	}
 
 	void Start ()
 	{
-		anim.SetBool ("Jump", true);
+		anim.SetBool ("Jump", true); //je start de game op in je jump animatie
 	}
 	
 
@@ -80,6 +82,8 @@ public class PlayerMovement : MonoBehaviour {
 		}
 
 		anim.speed += 0.0003f;
+
+		//Pause ();
 			
 	}
 	
@@ -123,12 +127,14 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	void Pause(){
-		if (Time.timeScale == 1){
-			Time.timeScale = 0;
+
+		if (deathCounter >= 3)
+		{
+			deathBraking -= 0.001f;
+			this.transform.Translate (transform.position.x, transform.position.y,transform.position.z);
 		}
-		else if (Time.timeScale == 0){
-			Time.timeScale = 1;
-		}
+		
+
 	}
 
 	void OnCollisionEnter2D (Collision2D coll)
@@ -152,7 +158,7 @@ public class PlayerMovement : MonoBehaviour {
 			{
 				anim.SetBool("Skating", false);
 				anim.SetBool("Death", true);
-				Pause ();
+
 			}
 
 
@@ -161,8 +167,7 @@ public class PlayerMovement : MonoBehaviour {
 
 		if (coll.gameObject.tag == "PickUp") 
 		{
-			//itemSFX.Play ();
-			//gameManager.AddCollectable();
+			Time.timeScale =  0.5f;
 			Destroy(coll.gameObject);
 		}
 	}
