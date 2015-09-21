@@ -1,0 +1,253 @@
+fileFormatVersion: 2
+guid: af6c77cf4b9bdd443b9976ab50d0935d
+timeCreated: 1442665091
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: CoolDuck_0
+    21300002: CoolDuck_1
+    21300004: CoolDuck_2
+    21300006: CoolDuck_3
+    21300008: CoolDuck_4
+    21300010: CoolDuck_5
+    21300012: CoolDuck_6
+    21300014: CoolDuck_7
+    21300016: CoolDuck_8
+    21300018: CoolDuck_9
+    21300020: CoolDuck_10
+    21300022: CoolDuck_11
+    21300024: CoolDuck_12
+    21300026: CoolDuck_13
+    21300028: CoolDuck_14
+    21300030: CoolDuck_15
+    21300032: CoolDuck_16
+    21300034: CoolDuck_17
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 64
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: CoolDuck_0
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 253
+        width: 66
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CoolDuck_1
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 253
+        width: 52
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CoolDuck_2
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 253
+        width: 66
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CoolDuck_3
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 253
+        width: 66
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CoolDuck_4
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 170
+        width: 66
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CoolDuck_5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 170
+        width: 65
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CoolDuck_6
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 170
+        width: 66
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CoolDuck_7
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 170
+        width: 66
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CoolDuck_8
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 86
+        width: 65
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CoolDuck_9
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 86
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CoolDuck_10
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 95
+        width: 79
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CoolDuck_11
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 95
+        width: 79
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CoolDuck_12
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 95
+        width: 75
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CoolDuck_13
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 95
+        width: 75
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CoolDuck_14
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 3
+        width: 75
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CoolDuck_15
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 3
+        width: 66
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CoolDuck_16
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 3
+        width: 66
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CoolDuck_17
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 3
+        width: 66
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
