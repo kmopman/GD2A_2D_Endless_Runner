@@ -4,14 +4,22 @@ using UnityEngine.UI;
 
 public class Splashscreen : MonoBehaviour 
 {
-	public float timer = 2.5f;
+    //floats
+    public float timer = 2.5f;
 	private float waitTimer = 1f;
+    //floats
+
+    //strings
 	public string levelToLoad = "Menu";
+    //strings
+
+    //images
 	public Image splash;
+    //images
+
 	Color colorToFadeTo;
 
-	// Use this for initialization
-	void Start () 
+    void Start () 
 	{
 		StartCoroutine ("DisplayScene");
 	}
@@ -24,6 +32,7 @@ public class Splashscreen : MonoBehaviour
 
 	IEnumerator DisplayScene () 
 	{
+        //Wacht een aantal seconden, laat logo vervagen en nieuw level laden
 		yield return new WaitForSeconds (waitTimer);
 		colorToFadeTo = new Color (1f, 1f, 1f, 0f);
 		splash.CrossFadeColor (colorToFadeTo, timer, true, true);

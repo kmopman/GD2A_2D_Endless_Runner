@@ -14,10 +14,7 @@ public class SlowDownClock : Pickup
 
     void Update()
     {
-        Debug.Log(letItGo);
-        Debug.Log(slowTimer);
-
-         if (letItGo == true)
+        if (letItGo == true)
         {
              SlowDown();
         }
@@ -25,11 +22,8 @@ public class SlowDownClock : Pickup
 
     void SlowDown()
     {
-
-        
-            slowTimer -= Time.deltaTime;
-            Time.timeScale = 0.5f;
-        
+        slowTimer -= Time.deltaTime;
+        Time.timeScale = 0.5f;
 
         if (slowTimer <= 0)
         {

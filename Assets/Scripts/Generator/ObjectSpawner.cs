@@ -2,11 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class ObjectSpawner : MonoBehaviour {
-	
-
-
-
+public class ObjectSpawner : MonoBehaviour
+{
 	//gameobjects
 	[SerializeField]
 	private GameObject[] pickups;
@@ -29,20 +26,15 @@ public class ObjectSpawner : MonoBehaviour {
     //bools
     private bool spawnObjects = true;
     //bools
-
-
-
-
-
-	// Use this for initialization
-	void Start () {
+    
+	void Start ()
+    {
         obstacleTimer = delayTimer;
 		lampTimer = delayTimer;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-
+	void Update ()
+    {
         GameObject player = GameObject.Find("Player");
         PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
 
@@ -51,7 +43,6 @@ public class ObjectSpawner : MonoBehaviour {
             ObstacleSpawner();
             LampSpawner();
         }
-		
 
         if (playerMovement.deathCounter == 3)
         {
@@ -67,7 +58,6 @@ public class ObjectSpawner : MonoBehaviour {
 		{	
 			Instantiate (pickups[Random.Range(0, pickups.Length)]);
             obstacleTimer = Random.Range(minTimer, maxTimer);
-
 		}
 	}
 
@@ -83,10 +73,8 @@ public class ObjectSpawner : MonoBehaviour {
                 Instantiate(lamps[i]);
                 lampTimer = maxTimer;
             }
-        }
-        
-			
-		}
+        }	
+	}
 
     void DeleteObjects()
     {

@@ -4,22 +4,25 @@ using System.Collections.Generic;
 
 public class Shield : Pickup 
 {
+    //gameobjects
 	private GameObject shield;
+    //gameobjects
 
+    //floats
     private float shieldTimer = 5f;
+    //floats
+
+    //bools
     private bool shieldBool = false;
+    //bools
 
-
-	void Awake() {
+    void Awake()
+    {
 		shield = GameObject.Find ("PlayerShield");
 	}
 
     void Update()
     {
-
-        Debug.Log(shieldTimer);
-        Debug.Log(shieldBool);
-
         if (shieldBool == true)
         {
             ShieldTimer();
@@ -28,8 +31,6 @@ public class Shield : Pickup
 
     public override void PlayerHit(PlayerMovement _SC)
     {
-        //shieldBool = true;
-
         base.PlayerHit(_SC);
         Debug.Log("SHIELD!");
     }
@@ -45,6 +46,5 @@ public class Shield : Pickup
             shield.SetActive(false);
             shieldBool = false;
         }
-        
     }
 }

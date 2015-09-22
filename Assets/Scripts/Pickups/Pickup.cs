@@ -4,7 +4,6 @@ using System.Collections;
 public class Pickup : MonoBehaviour 
 {
 
-
     public virtual void PlayerHit(PlayerMovement _SC)
     {
 
@@ -18,6 +17,7 @@ public class Pickup : MonoBehaviour
         //Als dit niet niet null is dan raken we de Player
         if (h_Player != null)
         {
+            //Als de player is geraakt, verwijder dit object
             Destroy(this.gameObject);
             PlayerHit(h_Player);
         }
