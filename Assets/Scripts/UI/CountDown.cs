@@ -20,7 +20,6 @@ public class CountDown : MonoBehaviour {
     private GameObject intro3;
 
     private GameObject logo;
-    private GameObject picture;
     //GameObjects
 
 
@@ -46,15 +45,10 @@ public class CountDown : MonoBehaviour {
         if (findObject == true)
         {
             logo = GameObject.Find("Logo");
-            picture = GameObject.Find("Picture");
             intro1 = GameObject.Find("Intro1");
             intro2 = GameObject.Find("Intro2");
             intro3 = GameObject.Find("Intro3");
             
-            if (picture.activeSelf == true)
-            {
-                //
-            }
 
             if (logo.activeSelf == true)
             {

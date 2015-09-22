@@ -4,38 +4,51 @@ using System.Collections;
 
 public class ScoreManager : MonoBehaviour 
 {
-	[SerializeField]
-	private Text scoreText;
-
+   
+    //floats
 	private float seconds = 3f;
 	public float scoreCounter;
+    //floats
 
-	private bool runText = false;
+
+    //bools
+    private bool runScore = false;
+    //bools
+
+    //text
+    [SerializeField]
+    private Text scoreText;
+    //text
+
 
 	void Start () 
 	{
-		StartCoroutine ("waitThreeSeconds");
-		//SetScoreText ();
+		StartCoroutine ("waitSeconds");
 	}
 
-	IEnumerator waitThreeSeconds() 
+	IEnumerator waitSeconds() 
 	{
 		yield return new WaitForSeconds (seconds);
-		runText = true;
+        runScore = true;
 	}
 	
 	void Update () 
 	{
-		if (Time.timeScale == 1)
+        GameObject player = GameObject.Find("Player");
+        PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
+
+
+        if (playerMovement.deathCounter <= 2)
         {
             CountScore();
         }
+        
+    }
 
-	}
 
     void CountScore()
     {
-        if (runText == true)
+        if (runScore == true)
         {
             SetScoreText();
             scoreCounter++;

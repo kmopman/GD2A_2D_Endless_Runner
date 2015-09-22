@@ -19,10 +19,10 @@ public class ObjectMovement : MonoBehaviour
 
 	void Start () 
     {
-		StartCoroutine ("waitThreeSeconds");  
+		StartCoroutine ("waitSeconds");  
 	}
 	
-	IEnumerator waitThreeSeconds()
+	IEnumerator waitSeconds()
 	{
 		yield return new WaitForSeconds (seconds);
 		goSign = true;

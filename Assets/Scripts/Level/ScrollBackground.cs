@@ -22,10 +22,10 @@ public class ScrollBackground : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		StartCoroutine ("waitThreeSeconds");
+		StartCoroutine ("waitSeconds");
 	}
 
-	IEnumerator waitThreeSeconds()
+	IEnumerator waitSeconds()
 	{
 		yield return new WaitForSeconds (seconds);
 		goSign = true;
