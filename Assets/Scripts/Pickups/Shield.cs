@@ -9,17 +9,46 @@ public class Shield : Pickup
     [SerializeField]
     private AudioSource shieldSFX;
 
-    Transform parentObject;
+    private float shieldTimer = 5f;
+    private bool shieldBool = false;
+
 
 	void Awake() {
 		shield = GameObject.Find ("PlayerShield");
 	}
 
+    void Update()
+    {
+
+        Debug.Log(shieldTimer);
+        Debug.Log(shieldBool);
+
+        if (shieldBool == true)
+        {
+            ShieldTimer();
+        }
+    }
+
     public override void PlayerHit(PlayerMovement _SC)
     {
-        shieldSFX.Play();
-		shield.SetActive(true);
+        //shieldBool = true;
+
         base.PlayerHit(_SC);
         Debug.Log("SHIELD!");
+    }
+
+    void ShieldTimer()
+    {
+        shieldTimer -= Time.deltaTime;
+
+        shieldSFX.Play();
+        shield.SetActive(true);
+
+        if (shieldTimer <= 0)
+        {
+            shield.SetActive(false);
+            shieldBool = false;
+        }
+        
     }
 }

@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour {
 	//floats
 	private float jumpHeight = 8.0f;
 	private float deathBraking = -5.0f;
-    private float hitDelay = 1f;
+    private float hitDelay = 0.5f;
 	//floats
 
 	//strings
@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour {
 	private int jumps = 0;
 	private int seconds = 3;
     private int hitCounter = 0;
-	private int deathCounter = 0;
+	public int deathCounter = 0;
 	private int deathDelay = 3;
 	//int
 
@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	void Start ()
-	{
+    {
 		anim.SetBool ("Jump", true); //je start de game op in je jump animatie
 	}
 	
@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour {
 		goSign = true;
 	}
 
-	void FixedUpdate () 
+	void Update () 
 	{
 
         Debug.Log(hitDelay);
@@ -94,10 +94,6 @@ public class PlayerMovement : MonoBehaviour {
         //functies die per frame geupdate moeten worden
 			
 
-        for (hitCounter = 0; hitCounter < 3; hitCounter++)
-        {
-            //
-        }
 	}
 	
 	void Movement () 
@@ -125,36 +121,45 @@ public class PlayerMovement : MonoBehaviour {
         }
 		//JUMP
 
-
-		//CROUCHING
-		if (Input.GetKeyDown (KeyCode.Z) && grounded == true) {
-			anim.SetBool ("Skating", false);
-			anim.SetBool ("Crouch", true);
-		} 
-        
-        else if (Input.GetKeyUp (KeyCode.Z) && grounded == true) 
-		{
-			anim.SetBool ("Crouch", false);
-			anim.SetBool ("Skating", true);
-		}
-		//CROUCHING
-
-
-		else if (!Input.GetKey(KeyCode.Space))
-		{
-			spacePressed = false;
-		}
-        //Laten weten dat de space button NIET ingedrukt is. Dit is noodzakelijk voor de double jump!
+        Crouch();
+		
 
 		
 	}
+
+    void Crouch()
+    {
+        //CROUCHING
+        if (Input.GetKeyDown(KeyCode.Z) && grounded == true)
+        {
+            anim.SetBool("Skating", false);
+            anim.SetBool("Crouch", true);
+        }
+
+        else if (Input.GetKeyUp(KeyCode.Z) && grounded == true)
+        {
+            anim.SetBool("Crouch", false);
+            anim.SetBool("Skating", true);
+        }
+        //CROUCHING
+
+
+        else if (!Input.GetKey(KeyCode.Space))
+        {
+            spacePressed = false;
+        }
+        //Laten weten dat de space button NIET ingedrukt is. Dit is noodzakelijk voor de double jump!
+    }
 
 	void Death(){
 
 		if (deathCounter >= 3 && grounded)
 		{
+            goSign = false;
+
             anim.SetBool("Hit", false);
             anim.SetBool("Skating", false);
+            anim.SetBool("Jump", false);
             anim.SetBool("Death", true);
 
             if (!hasPlayedSFX)
@@ -164,9 +169,8 @@ public class PlayerMovement : MonoBehaviour {
             }
             
 
-            Time.timeScale -= Time.deltaTime;
-            //this.GetComponent<Rigidbody2D>().isKinematic = true;
-
+            //Time.timeScale -= Time.deltaTime;
+            //Time.timescale is standaard 1. 
 		}
 		
 
@@ -202,14 +206,17 @@ public class PlayerMovement : MonoBehaviour {
 
     void OneSecHit()
     {
+        
+
         if (isHit == true && deathCounter <= 2)
         {
-            this.GetComponent<BoxCollider2D>().isTrigger = false;
-            
+           
             hitDelay -= Time.deltaTime;
 
-            if (hitDelay <= 0.9)
+            if (hitDelay <= 0.5)
             {
+                GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0.5f);
+
                 if(!hasPlayedSFX)
                 {
                     hitSFX.Play();
@@ -219,18 +226,23 @@ public class PlayerMovement : MonoBehaviour {
                 anim.SetBool("Jump", false);
                 anim.SetBool("Skating", false);
                 anim.SetBool("Hit", true);
+
+                if (!grounded)
+                {
+                    anim.SetBool("Jump", false);
+                    anim.SetBool("Hit", true);
+                }
             }
         }
 
         if (hitDelay <= 0.0)
         {
-            this.GetComponent<BoxCollider2D>().isTrigger = true;
-
             hasPlayedSFX = false;
             isHit = false;
 
-            anim.SetBool("Skating", true);
             anim.SetBool("Hit", false);
+            //anim.SetBool("Skating", true);
+           
         }
     }
 
@@ -238,7 +250,7 @@ public class PlayerMovement : MonoBehaviour {
     {
         if (other.gameObject.tag == "Obstacle")
         {
-            hitDelay = 1;
+            hitDelay = 0.5f;
 
             
 

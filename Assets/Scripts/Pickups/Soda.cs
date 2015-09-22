@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Soda : Pickup 
 {
-    [SerializeField]
-    private AudioSource sodaSFX;
+
+    private GameObject sodaSFX;
 
 
     public override void PlayerHit(PlayerMovement _SC)
@@ -14,7 +14,7 @@ public class Soda : Pickup
 		scoreManager.scoreCounter += 1000;
 		//Time.timeScale = 0.5f;
         base.PlayerHit(_SC);
-        sodaSFX.Play();
+        sodaSFX.gameObject.GetComponent<AudioSource>().Play();
         Debug.Log("1000 points!");
     }
 }

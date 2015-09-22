@@ -13,12 +13,13 @@ public class ObjectMovement : MonoBehaviour
     
 	//bools
 	private bool goSign = false;
+    private bool runSpeed = true;
 	//bools
 
 
 	void Start () 
     {
-		StartCoroutine ("waitThreeSeconds");
+		StartCoroutine ("waitThreeSeconds");  
 	}
 	
 	IEnumerator waitThreeSeconds()
@@ -29,14 +30,25 @@ public class ObjectMovement : MonoBehaviour
 	
 	void Update () 
     {
-        if (Time.timeScale == 1)
+        CheckStatus();
+	}
+
+    void CheckStatus()
+    {
+        GameObject player = GameObject.Find("Player");
+        PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
+
+        if (playerMovement.deathCounter >= 3)
+        {
+            runSpeed = false;
+        }
+
+        if (runSpeed == true)
         {
             MoveObject();
             IncreaseSpeed();
         }
-        
-	}
-
+    }
 
     void MoveObject()
     {

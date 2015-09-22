@@ -1,18 +1,31 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GameOver : MonoBehaviour {
+public class GameOver : MonoBehaviour
+{
+    private GameObject gameOver;
+    // Use this for initialization
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	    if (Time.timeScale <= 0)
+    void Awake()
+    {
+        GameObject gameOver = GameObject.Find("GameOver");
+        gameOver.SetActive(true);
+    }
+    void Start()
+    {
+       // GameObject gameOver = GameObject.Find("GameOver");
+       // gameOver.gameObject.SetActive(false);
+    }
+
+ 
+    void Update()
+    {
+        GameObject player = GameObject.Find("Player");
+        PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
+
+        if (playerMovement.deathCounter >= 3)
         {
-            Instantiate(this);
+            gameOver.gameObject.SetActive(true);
         }
-	}
+    }
 }

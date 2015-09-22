@@ -12,6 +12,7 @@ public class ScrollBackground : MonoBehaviour {
 
 	//bools
 	private bool goSign = false;
+    private bool runBackground = true;
 	//bools
 
 	//int
@@ -30,14 +31,25 @@ public class ScrollBackground : MonoBehaviour {
 		goSign = true;
 	}
 
-	// Update is called once per frame
 	void Update () {
-        if (Time.timeScale == 1)
+        CheckStatus();
+    }
+
+    void CheckStatus()
+    {
+        GameObject player = GameObject.Find("Player");
+        PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
+
+        if (runBackground == true)
         {
             ScrollBack();
         }
-        
-	}
+
+        if (playerMovement.deathCounter == 3)
+        {
+            runBackground = false;
+        }
+    }
 
     void ScrollBack()
     {

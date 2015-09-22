@@ -13,14 +13,14 @@ public class SlowDownClock : Pickup
     //bools
 
     //audio
-    private GameObject clockSFX;
+    //private GameObject clockSFX;
     //audio
 
 
 
     void Awake()
     {
-        GameObject clockSFX = GameObject.FindGameObjectWithTag("ClockSFX");
+ 
     }
 
     void Update()
@@ -57,7 +57,6 @@ public class SlowDownClock : Pickup
 
     public override void PlayerHit(PlayerMovement _SC)
     {
-        GetComponent<AudioSource>();
         letItGo = true;
         base.PlayerHit(_SC);
         Debug.Log("Slow...");

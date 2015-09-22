@@ -7,6 +7,7 @@ TagManager:
   - Obstacle
   - PickUp
   - Shield
+  - GameOver
   layers:
   - Default
   - TransparentFX

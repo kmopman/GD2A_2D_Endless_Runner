@@ -26,6 +26,13 @@ public class ObjectSpawner : MonoBehaviour {
 	//floats
 
 
+    //bools
+    private bool spawnObjects = true;
+    //bools
+
+
+
+
 
 	// Use this for initialization
 	void Start () {
@@ -36,12 +43,19 @@ public class ObjectSpawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		ObstacleSpawner ();
-		LampSpawner ();
+        GameObject player = GameObject.Find("Player");
+        PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
 
-        if (Time.timeScale <= 0.9)
+        if (spawnObjects == true)
         {
-            DeleteObjects();
+            ObstacleSpawner();
+            LampSpawner();
+        }
+		
+
+        if (playerMovement.deathCounter == 3)
+        {
+            spawnObjects = false;
         }
 	}
 
