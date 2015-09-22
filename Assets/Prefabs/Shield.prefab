@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11424368}
   m_Layer: 0
   m_Name: Shield
-  m_TagString: Untagged
+  m_TagString: Pickup_Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,6 +67,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 6
+  seconds: 3
 --- !u!212 &21251442
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -99,7 +100,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Pickup_Shield
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 151830}

@@ -12,17 +12,6 @@ public class SlowDownClock : Pickup
     private bool letItGo = false;
     //bools
 
-    //audio
-    //private GameObject clockSFX;
-    //audio
-
-
-
-    void Awake()
-    {
- 
-    }
-
     void Update()
     {
         Debug.Log(letItGo);

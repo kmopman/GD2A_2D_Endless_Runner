@@ -9,7 +9,7 @@ public class GameOver : MonoBehaviour
     void Awake()
     {
         GameObject gameOver = GameObject.Find("GameOver");
-        gameOver.SetActive(true);
+        //gameOver.SetActive(true);
     }
     void Start()
     {

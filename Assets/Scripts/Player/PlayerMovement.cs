@@ -43,11 +43,17 @@ public class PlayerMovement : MonoBehaviour {
 	private AudioSource hitSFX;
     [SerializeField]
     private AudioSource deathSFX;
-    
-	//audio
+    [SerializeField]
+    private AudioClip shieldSFX;
+    [SerializeField]
+    private AudioClip sodaSFX;
+    [SerializeField]
+    private AudioClip clockSFX;
 
-	//animator
-	Animator anim;
+    //audio
+
+    //animator
+    Animator anim;
 	//animator
 
 
@@ -248,6 +254,21 @@ public class PlayerMovement : MonoBehaviour {
 
     void OnTriggerEnter2D (Collider2D other)
     {
+        if (other.gameObject.tag == "Pickup_Shield")
+        {
+            AudioSource.PlayClipAtPoint(shieldSFX, transform.position);
+        }
+
+        else if (other.gameObject.tag == "Pickup_Soda")
+        {
+            AudioSource.PlayClipAtPoint(sodaSFX, transform.position);
+        }
+
+        else if (other.gameObject.tag == "Pickup_Clock")
+        {
+            AudioSource.PlayClipAtPoint(clockSFX, transform.position);
+        }
+
         if (other.gameObject.tag == "Obstacle")
         {
             hitDelay = 0.5f;

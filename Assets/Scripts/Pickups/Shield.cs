@@ -6,9 +6,6 @@ public class Shield : Pickup
 {
 	private GameObject shield;
 
-    [SerializeField]
-    private AudioSource shieldSFX;
-
     private float shieldTimer = 5f;
     private bool shieldBool = false;
 
@@ -41,7 +38,6 @@ public class Shield : Pickup
     {
         shieldTimer -= Time.deltaTime;
 
-        shieldSFX.Play();
         shield.SetActive(true);
 
         if (shieldTimer <= 0)

@@ -8,6 +8,9 @@ TagManager:
   - PickUp
   - Shield
   - GameOver
+  - Pickup_Shield
+  - Pickup_Soda
+  - Pickup_Clock
   layers:
   - Default
   - TransparentFX
