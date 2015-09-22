@@ -5,15 +5,15 @@ public class JustABall : MonoBehaviour
 {
 
 	//floats
-	private float movementSpeed = 15f;
+	private float movementSpeed = 5f;
     //floats
 
 	void Start () 
     {
-		StartCoroutine ("waitThreeSeconds");  
+		StartCoroutine ("waitSeconds");  //Begin hier met het aftellen
 	}
 
-    IEnumerator waitThreeSeconds()
+    IEnumerator waitSeconds()
     {
         yield return new WaitForSeconds(9);
     }

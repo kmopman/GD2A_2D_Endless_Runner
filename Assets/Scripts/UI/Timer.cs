@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour
     public float timerCounter;
 	private float seconds = 3f;
 
-	private bool runTimer = false;
+    private bool runTimer = false;
 
 	void Start ()
 	{
@@ -20,12 +20,16 @@ public class Timer : MonoBehaviour
 	IEnumerator waitThreeSeconds() 
 	{
 		yield return new WaitForSeconds (seconds);
-		runTimer = true;
+        runTimer = true;
 	}
 
 	void Update () 
     {
-        if (Time.timeScale >= 1)
+        GameObject player = GameObject.Find("Player");
+        PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
+
+
+        if (playerMovement.deathCounter <= 2)
         {
             TimerSet();
         }
@@ -34,15 +38,16 @@ public class Timer : MonoBehaviour
 
 	void TimerSet ()
 	{
-if (runTimer == true)
-		{
-		timerCounter += Time.deltaTime;
+        if (runTimer == true)
+        {
+            timerCounter += Time.deltaTime;
+
+            var minutes = timerCounter / 60;
+            var seconds = timerCounter % 60;
+            var fraction = (timerCounter * 100) % 100;
+
+            timerText.text = string.Format(" Time: {0:00}:{1:00}:{2:00}", minutes, seconds, fraction);
+        }
 		
-		var minutes = timerCounter / 60;
-		var seconds = timerCounter % 60;
-		var fraction = (timerCounter * 100) % 100;
-		
-		timerText.text = string.Format(" Time: {0:00}:{1:00}:{2:00}", minutes, seconds, fraction);
-	}
     }
 }
