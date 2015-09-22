@@ -7,8 +7,10 @@ public class ObjectMovement : MonoBehaviour
 	//floats
 	[SerializeField]
 	private float movementSpeed;
-	//floats
-
+    [SerializeField]
+    private float seconds = 3;
+    //floats
+    
 	//bools
 	private bool goSign = false;
 	//bools
@@ -16,30 +18,33 @@ public class ObjectMovement : MonoBehaviour
 
 	void Start () 
     {
-		movementSpeed = movementSpeed;
 		StartCoroutine ("waitThreeSeconds");
-
 	}
 	
 	IEnumerator waitThreeSeconds()
 	{
-		yield return new WaitForSeconds (3);
+		yield return new WaitForSeconds (seconds);
 		goSign = true;
 	}
 	
 	void Update () 
     {
-
-		if (goSign == true) 
+        if (Time.timeScale == 1)
         {
-			this.transform.position += Vector3.left * Time.deltaTime * movementSpeed;
-
-
-		}
-
-        IncreaseSpeed();
+            MoveObject();
+            IncreaseSpeed();
+        }
+        
 	}
-	
+
+
+    void MoveObject()
+    {
+        if (goSign == true)
+        {
+            this.transform.position += Vector3.left * Time.deltaTime * movementSpeed;
+        }
+    }
 
     void IncreaseSpeed()
     {

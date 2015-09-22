@@ -3,6 +3,7 @@ using System.Collections;
 
 public class ScrollBackground : MonoBehaviour {
 
+
 	[SerializeField]
 	//floats
 	private float speed = 0.0f;
@@ -31,19 +32,33 @@ public class ScrollBackground : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
-		if (goSign == true) {
-			Vector2 offset = new Vector2 (Time.time * speed, 0);
-
-			if (speed <= 0.001) {
-				speed += 0.0001f;
-			} else if (speed >= 0.1) {
-				speed += 0.00005f;
-			} else {
-				speed += 0.00001f;
-			}
-
-			GetComponent<Renderer> ().material.mainTextureOffset = offset;
-		}
+        if (Time.timeScale == 1)
+        {
+            ScrollBack();
+        }
+        
 	}
+
+    void ScrollBack()
+    {
+        if (goSign == true)
+        {
+            Vector2 offset = new Vector2(Time.time * speed, 0);
+
+            if (speed <= 0.001)
+            {
+                speed += 0.0001f;
+            }
+            else if (speed >= 0.1)
+            {
+                speed += 0.00005f;
+            }
+            else
+            {
+                speed += 0.00001f;
+            }
+
+            GetComponent<Renderer>().material.mainTextureOffset = offset;
+        }
+    }
 }

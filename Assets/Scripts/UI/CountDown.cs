@@ -10,6 +10,20 @@ public class CountDown : MonoBehaviour {
 	[SerializeField]
 	private GameObject waitingObject;
 
+    [SerializeField]
+    private bool findObject = false;
+
+
+    //GameObjects
+    private GameObject intro1;
+    private GameObject intro2;
+    private GameObject intro3;
+
+    private GameObject logo;
+    private GameObject picture;
+    //GameObjects
+
+
 	void Awake()
 	{
 		Appear ();
@@ -19,6 +33,37 @@ public class CountDown : MonoBehaviour {
 	{
 		StartCoroutine ("waitSeconds");
 	}
+
+    void Update ()
+    {
+
+        removeObjects();
+    }
+
+    void removeObjects()
+    {
+
+        if (findObject == true)
+        {
+            logo = GameObject.Find("Logo");
+            picture = GameObject.Find("Picture");
+            intro1 = GameObject.Find("Intro1");
+            intro2 = GameObject.Find("Intro2");
+            intro3 = GameObject.Find("Intro3");
+            
+            if (picture.activeSelf == true)
+            {
+                //
+            }
+
+            if (logo.activeSelf == true)
+            {
+                Destroy(intro1.gameObject);
+                Destroy(intro2.gameObject);
+                Destroy(intro3.gameObject);
+            }
+        }
+    }
 
 	IEnumerator waitSeconds()
 	{

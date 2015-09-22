@@ -18,7 +18,7 @@ public class Pickup : MonoBehaviour
         //Als dit niet niet null is dan raken we de Player
         if (h_Player != null)
         {
-            Debug.Log("HIT");
+            Destroy(this.gameObject);
             PlayerHit(h_Player);
         }
     }

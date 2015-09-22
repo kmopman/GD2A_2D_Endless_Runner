@@ -25,15 +25,17 @@ public class Timer : MonoBehaviour
 
 	void Update () 
     {
-		if (runTimer == true)
-		{
-			TimerSet();
-		}
-        
+        if (Time.timeScale >= 1)
+        {
+            TimerSet();
+        }
+		
     }
 
 	void TimerSet ()
 	{
+if (runTimer == true)
+		{
 		timerCounter += Time.deltaTime;
 		
 		var minutes = timerCounter / 60;
@@ -42,4 +44,5 @@ public class Timer : MonoBehaviour
 		
 		timerText.text = string.Format(" Time: {0:00}:{1:00}:{2:00}", minutes, seconds, fraction);
 	}
+    }
 }

@@ -55,6 +55,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 1
+  seconds: 6
 --- !u!212 &21206036
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -103,6 +104,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: movementSpeed
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: seconds
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

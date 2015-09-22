@@ -26,13 +26,21 @@ public class ScoreManager : MonoBehaviour
 	
 	void Update () 
 	{
-		if (runText == true) 
-		{
-			SetScoreText ();
-			scoreCounter++;
-		}
+		if (Time.timeScale == 1)
+        {
+            CountScore();
+        }
 
 	}
+
+    void CountScore()
+    {
+        if (runText == true)
+        {
+            SetScoreText();
+            scoreCounter++;
+        }
+    }
 
 	void SetScoreText()
 	{
