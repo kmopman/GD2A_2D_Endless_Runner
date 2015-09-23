@@ -15,7 +15,3 @@ EditorBuildSettings:
     path: Assets/_Scenes/Levels/Level2.unity
   - enabled: 1
     path: Assets/_Scenes/Levels/Level3.unity
-  - enabled: 1
-    path: Assets/_Scenes/MainMenu/Menu.unity
-  - enabled: 1
-    path: Assets/_Scenes/MainMenu/HowToPlay.unity

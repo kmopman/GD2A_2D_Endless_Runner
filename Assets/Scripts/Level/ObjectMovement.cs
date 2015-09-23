@@ -67,7 +67,7 @@ public class ObjectMovement : MonoBehaviour
         if (timer.timerCounter >= 0)
         {
             //Hier kan je de movementSpeed verhogen
-				movementSpeed += 0.01f;
+				movementSpeed += 0.02f;
 
         }
     }

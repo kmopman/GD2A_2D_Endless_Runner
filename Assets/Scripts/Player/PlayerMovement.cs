@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour {
 	//gameobjects
     [SerializeField]
     private GameObject soundTrack;
+
 	//gameobjects
 
 	//floats
@@ -17,7 +18,6 @@ public class PlayerMovement : MonoBehaviour {
 	private int jumps = 0;
 	private int seconds = 3;
 	public int deathCounter = 0;
-	private int deathDelay = 3;
 	//int
 
 	//bools
@@ -26,9 +26,17 @@ public class PlayerMovement : MonoBehaviour {
 	private bool goSign = false;
     private bool isHit = false;
     private bool hasPlayedSFX = false;
+    
 	//bools
 
 	//audio
+   
+    [SerializeField]
+    private AudioSource OST;
+    [SerializeField]
+    private AudioSource readySFX;
+    [SerializeField]
+    private AudioSource goSFX;
     [SerializeField]
     private AudioSource jumpSFX;
     [SerializeField]
@@ -36,27 +44,34 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField]
     private AudioSource deathSFX;
     [SerializeField]
-    private AudioSource shieldSFX;
+    private AudioClip shieldSFX;
     [SerializeField]
-    private AudioSource sodaSFX;
+    private AudioClip sodaSFX;
     [SerializeField]
-    private AudioSource clockSFX;
+    private AudioClip clockSFX;
 	//audio
 
 	//animator
 	Animator anim;
 	//animator
 
+    //strings
+    [SerializeField]
+    private string pickUps;
+    //strings
 
 	void Awake ()
 	{
+        readySFX.Play();
 		StartCoroutine ("waitThreeSeconds"); //wacht drie seconden
 		anim = GetComponent<Animator> (); //grijpt de animator zodat ie daar wijzigingen in kan maken
+        
 		grounded = false; // je begint niet op de grond
 	}
 
 	void Start ()
     {
+        
 		anim.SetBool ("Jump", true); //je start de game op in je jump animatie
 	}
 	
@@ -66,6 +81,7 @@ public class PlayerMovement : MonoBehaviour {
 		yield return new WaitForSeconds (seconds);
 		anim.SetBool("Skating", true);
 		goSign = true;
+        goSFX.Play();
 	}
 
     //Wacht drie seconden. Na drie seconden begint het spel, waardoor de speler begint met skaten.
@@ -169,6 +185,7 @@ public class PlayerMovement : MonoBehaviour {
 
                 if (!grounded)
                 {
+                    anim.SetBool("Skating", false);
                     anim.SetBool("Jump", false);
                     anim.SetBool("Hit", true);
                 }
@@ -187,8 +204,11 @@ public class PlayerMovement : MonoBehaviour {
 
 	void Death(){
 
+        
+
 		if (deathCounter >= 3 && grounded)
 		{
+            OST.Stop();
             goSign = false;
 
             anim.SetBool("Hit", false);
@@ -201,6 +221,7 @@ public class PlayerMovement : MonoBehaviour {
                 deathSFX.Play();
                 hasPlayedSFX = true;
             }
+
 		}
 	}
 
@@ -228,22 +249,22 @@ public class PlayerMovement : MonoBehaviour {
         */
 	}
 
-   
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Pickup_Shield")
         {
-            shieldSFX.Play();
+            AudioSource.PlayClipAtPoint(shieldSFX, transform.position);
         }
 
         else if (other.gameObject.tag == "Pickup_Soda")
         {
-            sodaSFX.Play();
+            AudioSource.PlayClipAtPoint(sodaSFX, transform.position);
         }
 
         else if (other.gameObject.tag == "Pickup_Clock")
         {
-            clockSFX.Play();
+            AudioSource.PlayClipAtPoint(clockSFX, transform.position);
         }
 
 

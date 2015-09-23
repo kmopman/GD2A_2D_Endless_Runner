@@ -6,11 +6,11 @@ TagManager:
   tags:
   - Obstacle
   - PickUp
+  - Pickup_Clock
+  - Pickup_Soda
+  - Pickup_Shield
   - Shield
   - GameOver
-  - Pickup_Shield
-  - Pickup_Soda
-  - Pickup_Clock
   layers:
   - Default
   - TransparentFX

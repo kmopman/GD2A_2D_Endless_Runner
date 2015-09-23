@@ -5,43 +5,51 @@ using System.Collections.Generic;
 public class SlowDownClock : Pickup
 {
     //floats
-    private float slowTimer = 5.0f;
+    private float slowTimer = 2.5f;
     //floats
 
     //bools
     private bool letItGo = false;
     //bools
 
-    void Update()
+    void FixedUpdate()
     {
         if (letItGo == true)
         {
-             SlowDown();
+            SlowDown();
         }
-    }
 
+    }
     void SlowDown()
     {
-        slowTimer -= Time.deltaTime;
-        Time.timeScale = 0.5f;
 
-        if (slowTimer <= 0)
+       
+
+        letItGo = true;
+
+        if (letItGo == true)
         {
-            letItGo = false;
+            slowTimer -= Time.deltaTime;
+            Time.timeScale = 0.5f;
 
-            if (letItGo == false)
+
+            if (slowTimer <= 0)
             {
-                Time.timeScale = 1.0f;
+                letItGo = false;
+
+                if (letItGo == false)
+                {
+                    Time.timeScale = 1.0f;
+                }
+
             }
-
         }
-
     }
 
     public override void PlayerHit(PlayerMovement _SC)
     {
         letItGo = true;
+        //SlowDown();
         base.PlayerHit(_SC);
-        Debug.Log("Slow...");
     }
 }

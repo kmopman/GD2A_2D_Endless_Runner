@@ -2,14 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class ObjectSpawner : MonoBehaviour
-{
+public class ObjectSpawner : MonoBehaviour {
+	
+
+
+
 	//gameobjects
 	[SerializeField]
 	private GameObject[] pickups;
-
-	[SerializeField]
-	private GameObject[] lamps;
 	//gameobjects
 
 	//floats
@@ -26,23 +26,24 @@ public class ObjectSpawner : MonoBehaviour
     //bools
     private bool spawnObjects = true;
     //bools
-    
-	void Start ()
-    {
+
+
+
+	void Start () {
         obstacleTimer = delayTimer;
 		lampTimer = delayTimer;
 	}
 	
-	void Update ()
-    {
+	void Update () {
+
         GameObject player = GameObject.Find("Player");
         PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
 
         if (spawnObjects == true)
         {
             ObstacleSpawner();
-            LampSpawner();
         }
+		
 
         if (playerMovement.deathCounter == 3)
         {
@@ -58,26 +59,7 @@ public class ObjectSpawner : MonoBehaviour
 		{	
 			Instantiate (pickups[Random.Range(0, pickups.Length)]);
             obstacleTimer = Random.Range(minTimer, maxTimer);
+
 		}
 	}
-
-	void LampSpawner()
-	{
-        int i = lamps.Length;
-		lampTimer -= Time.deltaTime;
-
-        if (lampTimer <= 0)
-        {
-            for (var l = 0; l < i; l++)
-            {
-                Instantiate(lamps[i]);
-                lampTimer = maxTimer;
-            }
-        }	
-	}
-
-    void DeleteObjects()
-    {
-       //
-    }
 }
